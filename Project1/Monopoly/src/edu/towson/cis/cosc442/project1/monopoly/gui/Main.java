@@ -12,7 +12,7 @@ public class Main {
 			String numberOfPlayers = JOptionPane.showInputDialog(window, "How many players");
 			if(numberOfPlayers == null) {
 				System.exit(0);
-			}
+			} 
 			try {
 				numPlayers = Integer.parseInt(numberOfPlayers);
 			} catch (NumberFormatException e) {
