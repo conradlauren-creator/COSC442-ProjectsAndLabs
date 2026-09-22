@@ -23,16 +23,21 @@ public class PropertyCell extends Cell {
 		return sellPrice;
 	}
 
-	public int getRent() {
+	public int getRent() {  //CCM: 2(Low)
 		int rentToCharge = rent;
 		String [] monopolies = theOwner.getMonopolies();
+		rentToCharge = calculateMonopoliesRent(rentToCharge, monopolies);
+		if(numHouses > 0) {
+			rentToCharge = rent * (numHouses + 1);
+		}
+		return rentToCharge;
+	}
+
+	private int calculateMonopoliesRent(int rentToCharge, String[] monopolies) { //CCM: 3(Low)
 		for(int i = 0; i < monopolies.length; i++) {
 			if(monopolies[i].equals(colorGroup)) {
 				rentToCharge = rent * 2;
 			}
-		}
-		if(numHouses > 0) {
-			rentToCharge = rent * (numHouses + 1);
 		}
 		return rentToCharge;
 	}
