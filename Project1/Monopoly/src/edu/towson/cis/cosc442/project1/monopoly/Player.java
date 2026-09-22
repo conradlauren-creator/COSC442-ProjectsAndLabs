@@ -94,20 +94,27 @@ public class Player {
 		return this.money;
 	}
 	
+	// I refactored by adding the method ifColorNonRailRoadOrUtility
+	// CCM before : 5
+	// CCM after: 2 and 4
 	public String[] getMonopolies() {
 		ArrayList<String> monopolies = new ArrayList<String>();
 		Enumeration<String> colors = colorGroups.keys();
 		while(colors.hasMoreElements()) {
 			String color = (String)colors.nextElement();
-            if(!(color.equals(RailRoadCell.COLOR_GROUP)) && !(color.equals(UtilityCell.COLOR_GROUP))) {
-    			Integer num = (Integer)colorGroups.get(color);
-    			GameBoard gameBoard = GameMaster.instance().getGameBoard();
-    			if(num.intValue() == gameBoard.getPropertyNumberForColor(color)) {
-    				monopolies.add(color);
-    			}
-            }
+            ifColorNonRailroadOrUtility(monopolies, color);
 		}
 		return (String[])monopolies.toArray(new String[monopolies.size()]);
+	}
+
+	private void ifColorNonRailroadOrUtility(ArrayList<String> monopolies, String color) {
+		if(!(color.equals(RailRoadCell.COLOR_GROUP)) && !(color.equals(UtilityCell.COLOR_GROUP))) {
+			Integer num = (Integer)colorGroups.get(color);
+			GameBoard gameBoard = GameMaster.instance().getGameBoard();
+			if(num.intValue() == gameBoard.getPropertyNumberForColor(color)) {
+				monopolies.add(color);
+			}
+		}
 	}
 
 	public String getName() {
