@@ -1,6 +1,9 @@
 package edu.towson.cis.cosc442.project1.monopoly;
 
 public class GameBoardRailRoad extends GameBoard {
+	/**
+	 * Initializes a game board configured with railroad cells and various property, special, and utility cells set with specific names, groups, prices, and rents.
+	 */
 	public GameBoardRailRoad() {
 		super();
 		PropertyCell blue1 = new PropertyCell();

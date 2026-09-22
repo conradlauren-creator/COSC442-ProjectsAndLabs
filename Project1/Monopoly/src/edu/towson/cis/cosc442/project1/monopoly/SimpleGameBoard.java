@@ -2,6 +2,9 @@ package edu.towson.cis.cosc442.project1.monopoly;
 
 
 public class SimpleGameBoard extends GameBoard {
+	/**
+	 * Constructs a SimpleGameBoard with predefined property cells set with names, color groups, prices, rents, and house prices, and adds them to the board.
+	 */
 	public SimpleGameBoard() {
 		super();
 		PropertyCell blue1 = new PropertyCell();

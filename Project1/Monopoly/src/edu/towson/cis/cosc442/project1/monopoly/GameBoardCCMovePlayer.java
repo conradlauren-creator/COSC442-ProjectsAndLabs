@@ -2,6 +2,9 @@ package edu.towson.cis.cosc442.project1.monopoly;
 
 
 public class GameBoardCCMovePlayer extends GameBoard {
+    /**
+     * Initializes a new GameBoardCCMovePlayer instance by setting up the game board with specific property cells, card cells, and cards for the Community Chest and Chance decks.
+     */
     public GameBoardCCMovePlayer() {
 		super();
 		PropertyCell blue1 = new PropertyCell();

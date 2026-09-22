@@ -2,6 +2,9 @@ package edu.towson.cis.cosc442.project1.monopoly;
 
 
 public class GameBoardCCLoseMoney extends GameBoard {
+    /**
+     * Constructs a game board setup including two blue properties, a Community Chest card cell with a "Pay $20" money card, a jail cell, and a Chance card cell.
+     */
     public GameBoardCCLoseMoney() {
 		super();
 		PropertyCell blue1 = new PropertyCell();

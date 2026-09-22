@@ -2,6 +2,9 @@ package edu.towson.cis.cosc442.project1.monopoly;
 
 
 public class GameBoard14 extends GameBoard {
+	/**
+	 * Initializes a GameBoard14 instance by creating and configuring all property cells with their names, color groups, prices, rents, house prices, and adding them to the board.
+	 */
 	public GameBoard14() {
 		super();
 		PropertyCell blue1 = new PropertyCell();

@@ -1,6 +1,9 @@
 package edu.towson.cis.cosc442.project1.monopoly;
 
 public class GameBoardFull extends GameBoard {
+    /**
+     * Constructs a full Monopoly game board with all properties, railroads, utilities, special cells, and cards initialized.
+     */
     public GameBoardFull() {
         super();
         PropertyCell dp1 = new PropertyCell();
